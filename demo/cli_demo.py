@@ -332,7 +332,7 @@ def chat(message: str) -> None:
         ),
         tools=_build_tools(),
         llm=MODEL,
-        verbose=True,
+        verbose=False,
     )
 
 
