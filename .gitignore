@@ -1,0 +1,32 @@
+# Secrets / local env
+.env
+demo/.env
+
+# Virtual environments
+.venv/
+venv/
+env/
+video/
+.pnpm-store/
+
+# Local/internal planning notes
+PLAN.md
+
+# Python build / packaging artifacts
+build/
+dist/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+
+# Caches & bytecode
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# OS / editor cruft
+.DS_Store

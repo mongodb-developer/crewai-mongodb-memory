@@ -1,0 +1,34 @@
+# Dependencies to run the crewai-mongodb-memory demos (memory_demo.py + agent_demo.py).
+#
+# Install from this directory:
+#     pip install -r requirements.txt
+# then add ATLAS_URI / VOYAGE_API_KEY / GEMINI_API_KEY to demo/.env and run:
+#     python demo/memory_demo.py     # vector recall over the canonical corpus
+#     python demo/agent_demo.py      # Gemini agent with long-term preference memory
+
+# The integration package itself (provides MongoDBStorageBackend + embed_text).
+# From the repo, install the local package instead:  pip install -e ..
+crewai-mongodb-memory>=0.1.0
+
+# MongoDB driver (also pulled in by crewai-mongodb-memory; pinned here for clarity).
+pymongo>=4.6
+
+# Voyage AI 3.5 embeddings (bring-your-own 1024-dim query/document vectors).
+voyageai>=0.3.0
+
+# Loads demo/.env automatically.
+python-dotenv>=1.0
+
+# Pretty terminal UI for the interactive CLI demo (cli_demo.py).
+rich>=13.0
+
+# CrewAI + its native Google Gemini provider (agent_demo.py only).
+crewai>=0.100
+crewai[google-genai]
+
+# Web search in cli_demo.py is provided through CrewAI's native MCP support
+# (Agent(mcps=["https://connect.composio.dev/mcp"])). The Composio "connect" MCP
+# endpoint needs no API key. Override the endpoint via COMPOSIO_MCP_URL if desired.
+# If your CrewAI build packages MCP support as an extra, install it too:
+#     crewai[mcp]
+
