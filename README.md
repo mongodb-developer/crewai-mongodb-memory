@@ -1,7 +1,5 @@
 # crewai-mongodb-memory — MongoDB Atlas memory backend for CrewAI
 
-> ⚠️ **ALPHA — NOT AN OFFICIAL MONGODB PRODUCT.** This integration is in **Alpha** and is **not** a supported or official MongoDB product. **Use at your own risk.**
-
 MongoDB Atlas integration for **CrewAI** providing the **Memory Store (MS)** capability:
 `MongoDBStorageBackend`, a full implementation of CrewAI's Unified Memory `StorageBackend`
 protocol that makes Atlas the long-term memory layer for CrewAI agents and crews — including
